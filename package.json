@@ -1,15 +1,30 @@
-"homepage": "https://Akshay34-ux.github.io/exptracker"
 {
   "name": "expense-tracker",
   "version": "1.0.0",
+  "private": true,
+  "homepage": "https://Akshay34-ux.github.io/exptracker",
+  "dependencies": {
+    "chart.js": "^4.4.1",
+    "gh-pages": "^6.1.0",
+    "react": "^18.2.0",
+    "react-chartjs-2": "^5.2.0",
+    "react-dom": "^18.2.0",
+    "react-router-dom": "^6.22.2",
+    "react-scripts": "5.0.1"
+  },
   "scripts": {
-    "build": "tailwindcss -i ./src/css/styles.css -o ./public/output.css --watch"
+    "start": "react-scripts start",
+    "build": "react-scripts build",
+    "test": "react-scripts test",
+    "eject": "react-scripts eject",
     "predeploy": "npm run build",
     "deploy": "gh-pages -d build"
   },
-  "devDependencies": {
-    "autoprefixer": "^10.0.0",
-    "postcss": "^8.0.0",
-    "tailwindcss": "^3.0.0"
+  "eslintConfig": {
+    "extends": ["react-app", "react-app/jest"]
+  },
+  "browserslist": {
+    "production": [">0.2%", "not dead", "not op_mini all"],
+    "development": ["last 1 chrome version", "last 1 firefox version", "last 1 safari version"]
   }
 }
