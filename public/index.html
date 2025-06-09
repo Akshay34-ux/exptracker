@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Dashboard - Expense Tracker</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+</head>
+<body class="bg-gray-100 min-h-screen">
+  <header class="bg-blue-600 text-white py-4 px-6 flex justify-between items-center">
+    <h1 class="text-2xl font-bold">Expense Tracker</h1>
+    <nav>
+      <a href="index.html" class="mx-2 hover:underline">Dashboard</a>
+      <a href="add.html" class="mx-2 hover:underline">Add Expense</a>
+      <a href="view.html" class="mx-2 hover:underline">View Expenses</a>
+    </nav>
+  </header>
+
+  <main class="p-6 space-y-6">
+    <section class="bg-white p-6 rounded shadow max-w-sm">
+      <h3 class="text-lg font-bold mb-2">Total Expenses</h3>
+      <p id="totalAmount" class="text-xl font-semibold text-blue-600">₹0</p>
+      <p class="text-gray-500 text-sm">You have <span id="expenseCount">0</span> expenses.</p>
+    </section>
+
+    <section class="grid grid-cols-1 md:grid-cols-2 gap-6">
+      <div class="bg-white p-4 rounded shadow">
+        <h4 class="text-md font-semibold mb-2">Expenses by Category</h4>
+        <canvas id="categoryChart" height="200"></canvas>
+      </div>
+      <div class="bg-white p-4 rounded shadow">
+        <h4 class="text-md font-semibold mb-2">Daily Expense Totals</h4>
+        <canvas id="dailyChart" height="200"></canvas>
+      </div>
+    </section>
+  </main>
+
+  <script src="js/app.js"></script>
+</body>
+</html>
