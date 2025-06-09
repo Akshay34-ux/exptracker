@@ -1,3 +1,5 @@
+import { Chart } from 'chart.js/auto';
+
 function getExpenses() {
   return JSON.parse(localStorage.getItem("expenses") || "[]");
 }
